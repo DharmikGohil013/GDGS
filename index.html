@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDGS</title>
     <style>
+        @keyframes infiniteScroll {
+  from {transform: translateX(0)}
+  to {transform: translateX(-50%)}
+}
         *{
             margin: 0px;
             padding: 0px;
@@ -16,10 +20,15 @@
         nav {
             width: 100%;
             height: 75px;
-            line-height: 75px;
-            padding: 0px 100px;
-            background-image: linear-gradient(rgba(0, 0, 74, 0.792),black, rgba(92, 87, 60, 0.737) );
+            padding: 0 20px;
+            background-image: linear-gradient(rgb(0, 0, 74), black, rgb(75, 64, 0));
             position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
         }
 
         nav .logo p {
@@ -67,24 +76,43 @@
         .signin:hover{
             color: bisque;
         }
+        nav li .signin11:hover{
+            color: bisque;
+            transition-duration: 1s;
+        }
     </style>
 </head>
 
 <body style="background-color: black;">
     <nav style="position: sticky;">
         <div class="logo">
-            <p>GDG</p>
+            <p style="margin-left: 100px;">GDG</p>
         </div>
-        <ul>
+        
+        <ul style="margin-left: 500px;">
             <li><a>HOME</a></li>
             <li><a>GAMES</a></li>
             <li><a>COMMING</a></li>
             <li><a>ABOUT</a></li>
-            <li><button style="padding: 4px;border-radius: 5px; margin-left:10px ; background-image: linear-gradient(black,rgb(81, 69, 0));"><a style="color: gold;" href="signin.html " >Sign in</a></button></li>
-            <li><button style="padding: 4px;border-radius: 5px; margin-left:10px ; background-image: linear-gradient(black,rgb(81, 69, 0));"><a style="color: gold;" href="signup.html">Sign up</a></button></li>
+            <li class="signin11" ><button style=" padding: 4px;border-radius: 5px; margin-left:10px ; background-image: linear-gradient(rgb(0, 0, 0),rgb(87, 0, 0));"><a style="color: rgb(163, 138, 0);" href="signin.html " >Sign in</a></button></li>
+            <li><button style="padding: 4px;border-radius: 5px; margin-left:10px ; background-image: linear-gradient(black,rgb(67, 0, 133));"><a style="color: rgb(163, 138, 0);" href="signup.html">Sign up</a></button></li>
 
         </ul>
+        <div class="logoimg">
+            <img src="a5.png" style="margin-top: 0%; position: absolute; top: -6px; left: 1px; width: 100px; height: 100px;" alt="GDG LOGO "> 
+        </div>
     </nav>
+    <div class="infisent" style="display: flex;
+     
+     
+    width: 60px;
+    animation-name: infiniteScroll;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;">
+        <h3 style=" white-space: nowrap; position: absolute; margin-top: -47px; margin-left: 250px; color: gold; font-size: larger; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; letter-spacing: 5px;">Next Up Coming WoodPicer .........</h3>
+    </div>
+
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae provident dolore ipsa, quidem autem, neque iusto
         ex reprehenderit earum vero amet blanditiis. Facilis corporis dolorem eius, culpa velit at ut alias aperiam
