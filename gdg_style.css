@@ -1,16 +1,201 @@
-*{
+@keyframes infiniteScroll {
+  from {transform: translateX(0);}
+  to {transform: translateX(-1%);}
+}
+
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
-nav{
+
+nav {
     width: 100%;
     height: 75px;
-    line-height: 75px;
-    padding: 0px 100px;
-    position: fixed;
-    background-image: linear-gradient(black,rgb(92, 87, 60));
+    padding: 0 20px;
+    background-image: linear-gradient(rgb(0, 0, 37), black, rgb(23, 19, 0));
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-nav .logo p{
+
+nav .logo p {
     font-size: 30px;
+    font-weight: bold;
+    float: left;
+    color: gold;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    cursor: pointer;
+    font-family: "Audiowide", sans-serif;
+}
+
+nav ul {
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+    list-style: none;
+}
+
+nav li a {
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 0px 10px;
+    color: rgb(228, 221, 176);
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: rgb(255, 255, 255);
+    transition-duration: 0.5s;
+}
+
+nav a .signup {
+    color: rgb(255, 0, 0);
+}
+
+.nav1 {
+    position: sticky;
+}
+
+p {
+    color: azure;
+}
+
+.signin:hover {
+    color: bisque;
+}
+
+nav li .signin11:hover {
+    color: bisque;
+    transition-duration: 1s;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.list {
+    margin-left: 920px;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: blanchedalmond;
+    opacity: 0.2;
+}
+
+.list:hover {
+    opacity: 1;
+    transition-duration: 0.7s;
+}
+
+.img1 {
+    margin-top: -705px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.id {
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+footer {
+  background-color: rgb(72, 72, 72);
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.footer .footer-col {
+  flex: 5;
+  min-width: 250px;
+  margin: 20px 0;
+}
+
+.footer .footer-col h4 {
+  font-size: 18px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer .footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer .footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer .footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #bbb;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer .footer-col ul li a:hover {
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer .footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background: rgba(44, 44, 44, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.footer .footer-col .social-links a:hover {
+  color: #24262b;
+  background: #fff;
+}
+
+/* Added new styles for Font Awesome 6.4.0 */
+.fab {
+  font-size: 20px;
 }
