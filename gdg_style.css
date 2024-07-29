@@ -1,6 +1,6 @@
 @keyframes infiniteScroll {
-  from {transform: translateX(0);}
-  to {transform: translateX(-1%);}
+  from {width: 10px;}
+  to {width: 700px;}
 }
 
 * {
@@ -198,4 +198,16 @@ footer {
 /* Added new styles for Font Awesome 6.4.0 */
 .fab {
   font-size: 20px;
+}
+.infisent{
+  animation: typing 3.5s steps(40,end) infinite;
+
+}
+@keyframes typing {
+    from{
+      width: 100px;
+    }
+    to{
+      width: 700px;
+    }
 }
