@@ -80,22 +80,27 @@ img {
     height: auto;
 }
 
-.list {
+.list  {
     margin-left: 920px;
     font-size: 50px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: blanchedalmond;
     opacity: 0.2;
 }
+.list1{
+  color: blanchedalmond;
+
+}
 
 .list:hover {
     opacity: 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-inline-start: 10px;
     transition-duration: 0.7s;
 }
 
 .img1 {
-    margin-top: -705px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: -700px;
 }
 
 .id {
@@ -210,4 +215,16 @@ footer {
     to{
       width: 700px;
     }
+}
+h1{
+    background-color: rgb(67, 67, 67);
+    border: #bbb;
+    
+}
+label{
+  margin-left: 500px;
+  color: #bbb;
+}
+.logoimg{
+  size: 100px;
 }
