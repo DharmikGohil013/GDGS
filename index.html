@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>GDGS</title>
     
@@ -19,7 +20,7 @@
             <p style="margin-left: 90px; margin-top: 5px;">GDG</p>
             <P style="font-size: 7PX; margin-top: 45PX; letter-spacing: 3px; margin-left: -125px; color: whitesmoke;">@Mercedes-Benz</P>
         </div>
-        <div></div>
+        
         <ul style="margin-left: 400px;">
             <li><a href="signin.html">HOME</a></li>
             <li><a href="#id" class="manu">GAMES</a></li>
@@ -37,12 +38,12 @@
         <h3 style="white-space: nowrap; position: absolute; margin-top: -47px; margin-left: 250px; color: rgb(101, 0, 0); font-size: larger; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; letter-spacing: 5px; ">Next Up Coming WoodPicer .........</h3>
     </div>
     <img src="a6.jpg">
-    <div id="id">
-        <li class="list"><a href="#online" class="list1">Online</a></li>
+    <div id="id" style="display: flex; flex-direction: column;">
+        <div style="flex: 70%;">
+            <li class="list"><a href="#online" class="list1">Online</a></li>
         <li class="list"><a href="#offline" class="list1">Offline</a></li>
         <li class="list"><a href="#playstation" class="list1">Playstation</a></li>
         <li class="list"><a href="#hc" class="list1">Home Consoles</a></li>
-        <li class="list"><a href="#hd" class="list1">Handheld Consoles</a></li>
         <li class="list"><a href="#pc" class="list1">Personal Computer</a></li>
         <li class="list"><a href="#md" class="list1">Mobile Devices</a></li>
         <li class="list"><a href="#cgs" class="list1">Cloud Gaming Services</a></li>
@@ -50,12 +51,17 @@
         <li class="list"><a href="#vr" class="list1">VR Systems</a></li>
         <li class="list"><a href="#wbg" class="list1">Web Browser Games</a></li>
         <li class="list"><a href="#sd" class="list1">Streaming Devices</a></li>
+        </div>
+    
+    <div style="flex: 50%;">
+        <img class="img1" src="a7.jpg" style="display: flex; width: 900px; height: 520px; margin-right: 0px; opacity: 0.5;">
     </div>
-    <img class="img1" src="a7.jpg" style="display: flex; width: 900px; height: auto; margin-right: 0px; opacity: 0.5;">
+</div>
     <br>
     <section  style="background-color: aliceblue;">
+       <div class="sentence-container">
         <label id="Online">
-            <h1 style="font-size: 40PX; font-family: Arial, Helvetica, sans-serif;" id="online">ONLINE</a></h1>
+            <h1 style="font-size: 40PX; font-family: Arial, Helvetica, sans-serif;" id="online" class="sentence">ONLINE</h1>
         </label>
         <P>
             <li>WoodPicer</li>
@@ -64,6 +70,14 @@
             <li>Call Of Duty</li>
             <li>Coc</li>
         </P>
+        <div style="display: flex; flex-direction: row;">
+            <img class="scroll-image" src="cod.jpg" alt="Scroll Image" style="height: 300px; width: auto;">
+            <img class="scroll-image" src="onlinegame.jpg" alt="Scroll Image" style="height: 300px; width: auto;">
+            <img class="scroll-image" src="onlinegame2.jpg" alt="Scroll Image" style="height: 300px; width: auto;">
+        </div>
+        
+       </div>
+       <div class="sentence-container">
         <label id="offline">
             <h1 style="font-size: 40PX; font-family: Arial, Helvetica, sans-serif;">Offline</h1>
         </label>
@@ -74,6 +88,12 @@
             <li>Call Of Duty</li>
             <li>Coc</li>
         </P>
+        <div style="display: flex; flex-direction: row;">
+            <img class="scroll-image" src="cod.jpg" alt="Scroll Image" style="height: 300px; width: auto;">
+            <img class="scroll-image" src="onlinegame.jpg" alt="Scroll Image" style="height: 300px; width: auto;">
+            <img class="scroll-image" src="onlinegame2.jpg" alt="Scroll Image" style="height: 300px; width: auto;">
+        </div>
+       </div>
         <label id="playstation">
             <h1 style="font-size: 40PX; font-family: Arial, Helvetica, sans-serif;">Playstation</h1>
         </label>
@@ -86,16 +106,6 @@
         </P>
         <label id="hc">
             <h1 style="font-size: 40PX; font-family: Arial, Helvetica, sans-serif;">Home Consoles</h1>
-        </label>
-        <P>
-            <li>WoodPicer</li>
-            <li>Pubg</li>
-            <li>Freefire</li>
-            <li>Call Of Duty</li>
-            <li>Coc</li>
-        </P>
-        <label id="hd">
-            <h1 style="font-size: 40PX; font-family: Arial, Helvetica, sans-serif;">Handheld Consoles</h1>
         </label>
         <P>
             <li>WoodPicer</li>
@@ -174,6 +184,42 @@
             <li>Call Of Duty</li>
             <li>Coc</li>
         </P>
+    </section>
+    <section>
+        <div class="row">
+            <div class="column">
+                <img src="cod.jpg" width="100%" id="#online">
+                
+                <img src="mobilegame.jpg" width="100%" id="#md">
+                
+                <img src="pc.jpg" width="100%" id="#pc">
+               
+                
+            </div>
+            <div class="column">
+                <img src="gta2.jpg" width="100%" id="offline" >
+                
+                <img src="homeconsolve.jpg" width="100%" id="#hc">
+                <img src="playstation.jpg" width="100%" height="20%" id="#playstation">
+                
+               
+            </div>
+            <div class="column">
+                <img src="cludgame.jpg" width="100%" id="#cgs">
+                <img src="ArcadeMachines.jpg" width="100%" id="#am">
+                <img src="hhc.jpg" width="100%" id="#hc">
+         
+                
+            </div>
+            <div class="column">
+                <img src="vrsystem.jpg" width="100%" id="#vr">
+                <img src="webgame.jpg" width="100%" id="#wbg">
+                <img src="striming.jpg" width="100%" id="#sd">
+               
+          
+            </div>
+            
+        </div>
     </section>
     <section id="about">
         <footer class="footer">
