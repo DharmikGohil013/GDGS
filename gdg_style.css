@@ -176,12 +176,10 @@ footer {
   display: block;
   transition: all 0.3s ease;
 }
-
 .footer .footer-col ul li a:hover {
   color: #fff;
   padding-left: 10px;
 }
-
 .footer .footer-col .social-links a {
   display: inline-block;
   height: 40px;
@@ -194,13 +192,10 @@ footer {
   color: #fff;
   transition: all 0.5s ease;
 }
-
 .footer .footer-col .social-links a:hover {
   color: #24262b;
   background: #fff;
 }
-
-/* Added new styles for Font Awesome 6.4.0 */
 .fab {
   font-size: 20px;
 }
@@ -253,6 +248,7 @@ label{
   overflow: hidden;
   white-space: nowrap;
   flex-direction: row;
+  transition-duration: 0.5s;
   
 }
 
@@ -262,11 +258,14 @@ label{
   
 }
 
-/* @keyframes scrollImage {
+@keyframes scrollImage {
   from {
     transform: translateX(0);
+
   }
   to {
+    
     transform: translateX(-100%);
+    
   }
-} */
+}
