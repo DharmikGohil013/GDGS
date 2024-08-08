@@ -81,11 +81,12 @@ img {
 }
 
 .list  {
-    margin-left: 920px;
+    margin-left: 670px;
     font-size: 40px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: blanchedalmond;
     opacity: 0.2;
+    text-align: left;
 }
 .list1{
   color: blanchedalmond;
@@ -212,13 +213,19 @@ footer {
     }
 }
 h1{
-    background-color: rgb(67, 67, 67);
+    background-image: linear-gradient(black,rgb(56, 56, 56));
     border: #bbb;
+    border-radius: 50px;
     
 }
 label{
   margin-left: 500px;
-  color: #bbb;
+  color: rgb(126, 107, 0);
+  opacity: 1;
+}
+label :hover{
+  opacity: 1;
+  transition-duration: 0.5s;
 }
 .logoimg{
   size: 100px;
@@ -226,7 +233,7 @@ label{
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 100px 100px;
 }
 .column {
   flex: 25%;
@@ -251,8 +258,18 @@ label{
   transition-duration: 0.5s;
   
 }
-
+.box
+{
+  width: 200px;
+}
+.sentence-container{
+ text-align: center;
+  width: auto;
+  height: auto;
+}
 .sentence-container:hover .scroll-image {
+  margin: 5px;
+  opacity: 1;
   transition-duration: 5s;
   display: block;
   
@@ -268,4 +285,16 @@ label{
     transform: translateX(-100%);
     
   }
+}
+.liin{
+  font-size: 20px;
+  color: antiquewhite;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.liin :hover
+{
+  opacity: 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-inline-start: 10px;
+    transition-duration: 0.7s;
 }
