@@ -298,3 +298,6 @@ label :hover{
     padding-inline-start: 10px;
     transition-duration: 0.7s;
 }
+#toggle {
+  display: none;
+}
