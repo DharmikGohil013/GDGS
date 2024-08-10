@@ -301,3 +301,25 @@ label :hover{
 #toggle {
   display: none;
 }
+#logo {
+  width: 800px;
+  height: 800px;
+  margin-bottom: 20px;
+}
+
+#company-name {
+  font-size: 20px;
+  font-weight: bold;
+  
+  margin-bottom: 20px;
+}
+#signin-container {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgb(255, 251, 0);
+  padding: 70px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  opacity: 0; /* Set initial opacity to 0 */
+  animation: fadeIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; /* Animation for fade-in effect */
+}
