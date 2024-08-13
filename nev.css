@@ -1,0 +1,70 @@
+.navmode{
+    background-image: linear-gradient(rgb(1, 1, 94), black, rgb(64, 53, 0));
+    height: 80px;
+    border-radius: 20px;
+}
+.logomode
+{
+    width: 100px;
+    height: 100px;
+    margin-top: -5px;
+}
+.logonamemode
+{
+    font-size: 50px;
+    margin-top: -90px;
+    margin-left: 100px;
+    color: rgb(154, 131, 0);
+    text-align: start;
+    position: absolute;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+.marqueemode
+{
+    margin-top: -205px;
+    margin-left: 120px;
+    color: white;
+    font-size: 30px;
+    font-family: cursive;
+    margin-bottom: 20px;
+    margin-right: -200px;
+    text-align: center;
+    text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #1e000f, 0 0 5px #e60073, 0 0 5px #e60073, 0 0 6px #e60073, 0 0 7px #e60073;
+}
+.menumode
+{
+    margin-top: -68px;
+    text-align: end;
+    letter-spacing: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+
+}
+.menubottonmode
+{
+    padding: 5px 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(rgb(117, 100, 0),black,rgb(117, 100, 0));
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0px;
+    width: 50px;
+    border-radius: 10px;
+}
+.menubottonmode :hover
+{
+    color: aquamarine;
+}
+.menubottonmode1
+{
+    padding: 5px 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    color: rgb(206, 175, 0);
+    font-size: 15px;
+    letter-spacing: 0px;
+    width: 50px;
+    border-radius: 10px;
+}

@@ -3,77 +3,9 @@
   to {width: 700px;}
 }
 
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
 
-nav {
-    width: 100%;
-    height: 75px;
-    padding: 0 20px;
-    background-image: linear-gradient(rgb(0, 0, 37), black, rgb(23, 19, 0));
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
-nav .logo p {
-    font-size: 30px;
-    font-weight: bold;
-    float: left;
-    color: gold;
-    text-transform: uppercase;
-    letter-spacing: 15px;
-    cursor: pointer;
-    font-family: "Audiowide", sans-serif;
-}
 
-nav ul {
-    float: right;
-}
-
-nav li {
-    display: inline-block;
-    list-style: none;
-}
-
-nav li a {
-    font-size: 15px;
-    text-transform: uppercase;
-    padding: 0px 10px;
-    color: rgb(228, 221, 176);
-    text-decoration: none;
-}
-
-nav li a:hover {
-    color: rgb(255, 255, 255);
-    transition-duration: 0.5s;
-}
-
-nav a .signup {
-    color: rgb(255, 0, 0);
-}
-
-.nav1 {
-    position: sticky;
-}
-
-p {
-    color: azure;
-}
-
-.signin:hover {
-    color: bisque;
-}
-
-nav li .signin11:hover {
-    color: bisque;
-    transition-duration: 1s;
-}
 
 img {
     width: 100%;
@@ -88,25 +20,7 @@ img {
     opacity: 0.2;
     text-align: left;
 }
-.list1{
-  color: blanchedalmond;
 
-}
-
-.list:hover {
-    opacity: 1;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-inline-start: 10px;
-    transition-duration: 0.7s;
-}
-
-.img1 {
-    margin-top: -520px;
-}
-
-.id {
-  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
 
 html {
   scroll-behavior: smooth;
