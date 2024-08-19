@@ -33,6 +33,7 @@ body{
     margin-top: 39px;
     display: flex;
     align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .marqueemode {
@@ -371,4 +372,7 @@ footer {
     font-size: 1rem;
     line-height: 1.5;
     color: #ddd;
+}
+html{
+    scroll-behavior: smooth;
 }  
