@@ -3,9 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Up</title>
+    <style>
+        body{
+            background-image: url('GDGS.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            width: auto;
+
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        #signup-container {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgb(255, 100, 100);
+            padding: 80px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+
+        #company-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #success-message,
+        #error-message {
+            display: none;
+            margin-top: 10px;
+        }
+
+        #error-message {
+            color: red;
+        }
+
+        #success-message {
+            color: green;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="signup-container">
+        <img id="logo" src="GDGS.png" alt="Logo">
+        <div id="company-name">DHARMIK GOHIL FILM</div>
+        <form id="signup-form" action="singup.php" method="POST">
+            <input type="text" id="name" name="name" placeholder="Full Name" required>
+            <input type="text" id="signup-username" name="username" placeholder="Username" required>
+            <input type="password" id="signup-password" name="password" placeholder="Password" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p id="success-message" style="display: none;">Account created successfully!</p>
+        <p id="error-message" style="display: none;">Username or Email already exists</p>
+    </div>
+
+    <script>
+        function signUp() {
+            const name = document.getElementById("name").value;
+            const username = document.getElementById("signup-username").value;
+            const password = document.getElementById("signup-password").value;
+            const email = document.getElementById("email").value;
+
+            // Validate if the fields are not empty
+            if (name.trim() !== "" && username.trim() !== "" && password.trim() !== "" && email.trim() !== "") {
+                // Simulate existing user check (replace with your actual logic)
+                const existingUsers = ["existing_user", "existing_email@example.com"];
+                
+                if (existingUsers.includes(username) || existingUsers.includes(email)) {
+                    document.getElementById("error-message").style.display = "block";
+                    document.getElementById("success-message").style.display = "none";
+                    
+                } else {
+                    document.getElementById("error-message").style.display = "none";
+                    document.getElementById("success-message").style.display = "block";
+                    window.location.href = 'index.html';
+                    // You can redirect to another page or perform any other action after successful signup
+                }
+            } else {
+                // Show an error if any field is empty
+                document.getElementById("error-message").style.display = "block";
+                document.getElementById("success-message").style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
