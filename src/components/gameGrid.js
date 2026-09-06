@@ -77,8 +77,33 @@ export function createGameGrid() {
 
     container.appendChild(section);
 
-    // ── "New this week" section (only on trending/home) ──
+    // ── "🔥 Hot Games" section (only on trending/home) ──
     if (!searchQuery && activeCategory === 'trending') {
+      const hotSection = document.createElement('section');
+      hotSection.className = 'section';
+      hotSection.setAttribute('aria-labelledby', 'hot-games-heading');
+
+      const hotHead = document.createElement('div');
+      hotHead.className = 'section-head';
+      hotHead.innerHTML = `
+        <h2 id="hot-games-heading" style="display:flex;align-items:center;gap:8px;">🔥 Hot Games</h2>
+        <a href="#" class="see-all-link" aria-label="See all hot games on Playzy">See all →</a>
+      `;
+      hotSection.appendChild(hotHead);
+
+      const hotGrid = document.createElement('div');
+      hotGrid.className = 'card-grid';
+
+      // Pick hot and playable games
+      const hotGamesList = games.filter((g) => g.isHot || g.isPlayable).slice(0, 8);
+      hotGamesList.forEach((game) => {
+        hotGrid.appendChild(createGameCard(game));
+      });
+
+      hotSection.appendChild(hotGrid);
+      container.appendChild(hotSection);
+
+      // ── "New this week" section ──
       const newSection = document.createElement('section');
       newSection.className = 'section';
       newSection.setAttribute('aria-labelledby', 'new-this-week-heading');

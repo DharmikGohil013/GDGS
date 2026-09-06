@@ -4,6 +4,7 @@ import { createGameCard } from './gameCard.js';
 
 // Lazy-load game modules
 const gameModules = {
+  'gravity-switch': () => import('../games/gravity-switch.js'),
   'hextris': () => import('../games/hextris.js'),
   'color-switch': () => import('../games/color-switch.js'),
   'tower-stacker': () => import('../games/tower-stacker.js'),

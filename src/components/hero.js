@@ -3,13 +3,26 @@ import { setState } from '../store.js';
 
 const featuredGames = [
   {
+    id: 'gravity-switch',
+    title: 'Gravity Switch',
+    headline: 'Flip gravity.<br>Defy limits.',
+    sub: 'Play Gravity Switch free online! Tap screen or press Space to invert gravity in real-time, dodge ceiling spikes, and conquer high scores.',
+    eyebrow: '🔥 Hot Today #1',
+    bg: 'linear-gradient(155deg, #EC4899, #8B5CF6)',
+    tag: 'Gravity Switch • 🔥 Hot Today',
+    category: 'arcade',
+    isPlayable: true,
+    engine: 'canvas',
+    artSvg: `<svg viewBox="0 0 80 80" width="76" height="76" aria-hidden="true"><circle cx="40" cy="40" r="38" fill="rgba(255,255,255,0.16)"/><rect x="24" y="24" width="32" height="32" rx="6" fill="#00F0FF"/><path d="M40 14 L48 24 L32 24 Z" fill="#FFC93C"/><path d="M40 66 L48 56 L32 56 Z" fill="#FFC93C"/></svg>`
+  },
+  {
     id: 'hextris',
     title: 'Hextris',
     headline: 'Rotate the hex.<br>Clear the stack.',
     sub: 'Play Hextris free online! Rotate the central hexagon, match 3 or more colored blocks, and build insane high-score combos.',
-    eyebrow: '🔥 Hot Today #1',
+    eyebrow: '🔥 Trending Hot',
     bg: 'linear-gradient(155deg, #7C3AED, #4C1D95)',
-    tag: 'Hextris • 🔥 Hot Today',
+    tag: 'Hextris • 🔥 Trending Hot',
     category: 'puzzle',
     isPlayable: true,
     engine: 'canvas',

@@ -91,6 +91,34 @@ export const PAGE_SEO = {
     }
   },
 
+  'gravity-switch': {
+    title: 'Play Gravity Switch Free Online — Invert Gravity Arcade Game | Playzy',
+    description: 'Play Gravity Switch free online instantly — tap screen or press Space to invert gravity! Dodge ceiling spikes, jump hazards, and build unbeatable high scores.',
+    url: '/#/play/gravity-switch',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'VideoGame',
+      name: 'Gravity Switch',
+      alternateName: ['Gravity Switch Game', 'Gravity Flip', 'Gravity Runner'],
+      description: 'Gravity Switch is an intense action arcade runner where tapping or pressing Space inverts gravity. Dodge floor and ceiling spikes to survive.',
+      url: 'https://playzy.dharmikgohil.art/#/play/gravity-switch',
+      gamePlatform: ['Web Browser', 'Mobile Browser', 'Desktop Browser'],
+      playMode: 'SinglePlayer',
+      applicationCategory: 'Game',
+      operatingSystem: 'Any — No installation required',
+      genre: ['Arcade', 'Runner', 'Action'],
+      author: { '@type': 'Organization', name: 'Playzy', url: 'https://playzy.dharmikgohil.art/' },
+      publisher: { '@type': 'Organization', name: 'Playzy', url: 'https://playzy.dharmikgohil.art/' },
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/InStock' },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        bestRating: '5',
+        ratingCount: '385000'
+      }
+    }
+  },
+
   hextris: {
     title: 'Play Hextris Free Online — Hexagonal Tetris Browser Game | Playzy',
     description: 'Play Hextris free online instantly — the official hexagonal Tetris puzzle game. Rotate the hexagon, match 3+ color blocks, build high-score combos. No download required.',
