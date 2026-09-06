@@ -13,6 +13,7 @@ const featuredGames = [
     category: 'arcade',
     isPlayable: true,
     engine: 'canvas',
+    image: '/images/gravity-switch.jpg',
     artSvg: `<svg viewBox="0 0 80 80" width="76" height="76" aria-hidden="true"><circle cx="40" cy="40" r="38" fill="rgba(255,255,255,0.16)"/><rect x="24" y="24" width="32" height="32" rx="6" fill="#00F0FF"/><path d="M40 14 L48 24 L32 24 Z" fill="#FFC93C"/><path d="M40 66 L48 56 L32 56 Z" fill="#FFC93C"/></svg>`
   },
   {

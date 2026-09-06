@@ -95,6 +95,7 @@ export const PAGE_SEO = {
     title: 'Play Gravity Switch Free Online — Invert Gravity Arcade Game | Playzy',
     description: 'Play Gravity Switch free online instantly — tap screen or press Space to invert gravity! Dodge ceiling spikes, jump hazards, and build unbeatable high scores.',
     url: '/#/play/gravity-switch',
+    image: '/images/gravity-switch.jpg',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'VideoGame',
