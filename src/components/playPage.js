@@ -42,7 +42,7 @@ export function createPlayPage(gameId) {
   };
 
   const container = document.createElement('div');
-  container.className = 'play-page-container';
+  container.className = `play-page-container${game.isLightTheme ? ' light-theme' : ''}`;
   // Schema.org VideoGame on the whole page container
   container.setAttribute('itemscope', '');
   container.setAttribute('itemtype', 'https://schema.org/VideoGame');

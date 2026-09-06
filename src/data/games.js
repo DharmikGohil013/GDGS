@@ -33,8 +33,8 @@ function generateGames() {
 
   // Playable games
   const playableGames = [
-    { id: 'gravity-switch', title: 'Gravity Switch', category: 'arcade', isPlayable: true, plays: '38.5M', rating: 4.9, color: 'purple', iconType: 'runner', engine: 'canvas', isHot: true },
-    { id: 'hextris', title: 'Hextris', category: 'puzzle', isPlayable: true, plays: '48.9M', rating: 5.0, color: 'purple', iconType: 'puzzle', engine: 'canvas', isHot: true },
+    { id: 'gravity-switch', title: 'Gravity Switch', category: 'arcade', isPlayable: true, plays: '38.5M', rating: 4.9, color: 'purple', iconType: 'runner', engine: 'canvas', isHot: true, isLightTheme: true },
+    { id: 'hextris', title: 'Hextris Stack', category: 'puzzle', isPlayable: true, plays: '48.9M', rating: 5.0, color: 'purple', iconType: 'puzzle', engine: 'canvas', isHot: true },
     { id: 'color-switch', title: 'Color Switch', category: 'arcade', isPlayable: true, plays: '24.8M', rating: 4.9, color: 'purple', iconType: 'ball', engine: 'phaser', image: '/images/color-switch.jpg' },
     { id: 'tower-stacker', title: 'Tower Stacker', category: 'arcade', isPlayable: true, plays: '12.5M', rating: 4.8, color: 'coral', iconType: 'stack', engine: 'phaser' },
     { id: 'neon-snake', title: 'Neon Snake', category: 'arcade', isPlayable: true, plays: '8.2M', rating: 4.7, color: 'green', iconType: 'snake', engine: 'canvas' },

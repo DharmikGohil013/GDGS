@@ -769,7 +769,7 @@ function drawUI(ctx, w, h, cx, cy) {
 
   // OVERLAY STATES
   if (gameState === 'START') {
-    drawOverlay(ctx, w, h, 'HEXTRIS', 'Press SPACE or Tap Screen to Play', 'Rotate: ← / → or A / D | Fast Fall: ↓');
+    drawOverlay(ctx, w, h, 'HEXTRIS STACK', 'Press SPACE or Tap Screen to Play', 'Rotate: ← / → or A / D | Fast Fall: ↓');
   } else if (gameState === 'PAUSED') {
     drawOverlay(ctx, w, h, 'GAME PAUSED', 'Press P, ESC, or Tap Screen to Resume', `Current Score: ${score}`);
   } else if (gameState === 'GAMEOVER') {

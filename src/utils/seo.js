@@ -120,15 +120,15 @@ export const PAGE_SEO = {
   },
 
   hextris: {
-    title: 'Play Hextris Free Online — Hexagonal Tetris Browser Game | Playzy',
-    description: 'Play Hextris free online instantly — the official hexagonal Tetris puzzle game. Rotate the hexagon, match 3+ color blocks, build high-score combos. No download required.',
+    title: 'Play Hextris Stack Free Online — Hexagonal Tetris Browser Game | Playzy',
+    description: 'Play Hextris Stack free online instantly — the official hexagonal Tetris puzzle game. Rotate the hexagon, match 3+ color blocks, build high-score combos. No download required.',
     url: '/#/play/hextris',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'VideoGame',
-      name: 'Hextris',
-      alternateName: ['Hextris Game', 'Hexagonal Tetris', 'Hextris Browser Game'],
-      description: 'Hextris is a fast-paced hexagonal puzzle game inspired by Tetris. Rotate the central hexagon to match 3 or more blocks of the same color.',
+      name: 'Hextris Stack',
+      alternateName: ['Hextris Stack Game', 'Hexagonal Tetris', 'Hextris Browser Game'],
+      description: 'Hextris Stack is a fast-paced hexagonal puzzle game inspired by Tetris. Rotate the central hexagon to match 3 or more blocks of the same color.',
       url: 'https://playzy.dharmikgohil.art/#/play/hextris',
       gamePlatform: ['Web Browser', 'Mobile Browser', 'Desktop Browser'],
       playMode: 'SinglePlayer',

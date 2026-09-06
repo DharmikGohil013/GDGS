@@ -10,6 +10,72 @@
   flex-direction: column;
 }
 
+/* Light Theme overrides for play page */
+.play-page-container.light-theme {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.play-page-container.light-theme .play-page-header {
+  background: #ffffff;
+  color: #0f172a;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.play-page-container.light-theme .play-back-btn,
+.play-page-container.light-theme .play-action-btn {
+  background: #f1f5f9;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+}
+
+.play-page-container.light-theme .play-back-btn:hover,
+.play-page-container.light-theme .play-action-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.play-page-container.light-theme .play-game-title {
+  color: #0f172a;
+}
+
+.play-page-container.light-theme .play-viewport {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.play-page-container.light-theme .play-viewport canvas {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.play-page-container.light-theme .play-loading-spinner {
+  background: #ffffff;
+  color: #475569;
+}
+
+.play-page-container.light-theme .play-info-card {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.play-page-container.light-theme .play-info-meta {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.play-page-container.light-theme .play-info-meta h2,
+.play-page-container.light-theme .play-controls-guide h3,
+.play-page-container.light-theme .play-related-section h2 {
+  color: #0f172a;
+}
+
+.play-page-container.light-theme .play-info-meta p,
+.play-page-container.light-theme .play-meta-stats,
+.play-page-container.light-theme .play-controls-guide p {
+  color: #475569;
+}
+
 .play-page-header {
   display: flex;
   align-items: center;

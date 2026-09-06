@@ -1,4 +1,4 @@
-// ─── Gravity Switch Game Engine (HTML5 Canvas) ───
+// ─── Gravity Switch Game Engine (HTML5 Canvas - White Theme) ───
 
 let animId = null;
 let containerRef = null;
@@ -14,7 +14,7 @@ export function initGame(container) {
   canvas.style.width = '100%';
   canvas.style.height = '100%';
   canvas.style.display = 'block';
-  canvas.style.background = '#0b0d19';
+  canvas.style.background = '#ffffff';
   container.appendChild(canvas);
 
   const ctx = canvas.getContext('2d');
@@ -47,7 +47,7 @@ export function initGame(container) {
     vy: 0,
     targetY: 0,
     isFlipping: false,
-    color: '#00F0FF',
+    color: '#4F46E5', // Vibrant indigo player
     trail: []
   };
 
@@ -145,7 +145,7 @@ export function initGame(container) {
     }
   }
 
-  function addFloatingText(text, x, y, color = '#FFC93C') {
+  function addFloatingText(text, x, y, color = '#D97706') {
     floatingTexts.push({
       text,
       x,
@@ -160,16 +160,16 @@ export function initGame(container) {
   function loop() {
     animId = requestAnimationFrame(loop);
 
-    // Clear background
+    // Clear background — Crisp White Light Theme
     const bgGrad = ctx.createLinearGradient(0, 0, 0, canvas.height);
-    bgGrad.addColorStop(0, '#0a0c1b');
-    bgGrad.addColorStop(0.5, '#12152e');
-    bgGrad.addColorStop(1, '#0a0c1b');
+    bgGrad.addColorStop(0, '#ffffff');
+    bgGrad.addColorStop(0.5, '#f8fafc');
+    bgGrad.addColorStop(1, '#f1f5f9');
     ctx.fillStyle = bgGrad;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Draw background futuristic grid lines
-    ctx.strokeStyle = 'rgba(139, 92, 246, 0.08)';
+    // Draw background subtle grid lines
+    ctx.strokeStyle = 'rgba(99, 102, 241, 0.12)';
     ctx.lineWidth = 1;
     const gridOffset = (frame * (speed * 0.5)) % 40;
     for (let x = -gridOffset; x < canvas.width; x += 40) {
@@ -180,9 +180,9 @@ export function initGame(container) {
     }
 
     // Draw track ceiling and floor boundaries
-    ctx.shadowBlur = 12;
-    ctx.shadowColor = '#8B5CF6';
-    ctx.strokeStyle = '#8B5CF6';
+    ctx.shadowBlur = 8;
+    ctx.shadowColor = 'rgba(79, 70, 229, 0.3)';
+    ctx.strokeStyle = '#4F46E5';
     ctx.lineWidth = 4;
 
     // Ceiling
@@ -199,8 +199,8 @@ export function initGame(container) {
 
     ctx.shadowBlur = 0;
 
-    // Track accents
-    ctx.fillStyle = 'rgba(236, 72, 153, 0.2)';
+    // Track accents (margin areas)
+    ctx.fillStyle = 'rgba(99, 102, 241, 0.06)';
     ctx.fillRect(0, 0, canvas.width, TOP_MARGIN);
     ctx.fillRect(0, canvas.height - BOTTOM_MARGIN, canvas.width, BOTTOM_MARGIN);
 
@@ -297,7 +297,7 @@ export function initGame(container) {
         if (px2 > ox1 && px1 < ox2 && py2 > obsY1 && py1 < obsY2) {
           // Player hit obstacle -> Game Over!
           gameState = 'GAMEOVER';
-          spawnExplosion(player.x + player.size / 2, player.y + player.size / 2, '#FF3366', 30);
+          spawnExplosion(player.x + player.size / 2, player.y + player.size / 2, '#EF4444', 30);
           if (score > highscore) {
             highscore = score;
             localStorage.setItem('gravity_switch_highscore', highscore.toString());
@@ -320,8 +320,8 @@ export function initGame(container) {
           combo++;
           const bonus = 50 * combo;
           score += bonus;
-          spawnExplosion(coin.x, coin.y, '#FFC93C', 12);
-          addFloatingText(`+${bonus}`, coin.x, coin.y, '#FFC93C');
+          spawnExplosion(coin.x, coin.y, '#F59E0B', 12);
+          addFloatingText(`+${bonus}`, coin.x, coin.y, '#D97706');
           coins.splice(i, 1);
           continue;
         }
@@ -336,15 +336,15 @@ export function initGame(container) {
 
     // Draw Trail
     player.trail.forEach((t) => {
-      ctx.fillStyle = `rgba(0, 240, 255, ${t.alpha * 0.4})`;
+      ctx.fillStyle = `rgba(79, 70, 229, ${t.alpha * 0.35})`;
       ctx.fillRect(t.x, t.y, player.size, player.size);
     });
 
     // Draw Obstacles
     obstacles.forEach((obs) => {
-      ctx.shadowBlur = 10;
-      ctx.shadowColor = '#FF3366';
-      ctx.fillStyle = '#FF3366';
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = 'rgba(239, 68, 68, 0.4)';
+      ctx.fillStyle = '#EF4444';
 
       ctx.beginPath();
       if (obs.type === 'floor_spike') {
@@ -363,9 +363,9 @@ export function initGame(container) {
 
     // Draw Coins
     coins.forEach((coin) => {
-      ctx.shadowBlur = 12;
-      ctx.shadowColor = '#FFC93C';
-      ctx.fillStyle = '#FFC93C';
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = 'rgba(245, 158, 11, 0.4)';
+      ctx.fillStyle = '#F59E0B';
       ctx.beginPath();
       ctx.arc(coin.x, coin.y, coin.radius, 0, Math.PI * 2);
       ctx.fill();
@@ -379,12 +379,12 @@ export function initGame(container) {
 
     // Draw Player
     if (gameState !== 'GAMEOVER' || Math.floor(frame / 6) % 2 === 0) {
-      ctx.shadowBlur = 15;
-      ctx.shadowColor = player.color;
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = 'rgba(79, 70, 229, 0.5)';
       ctx.fillStyle = player.color;
       ctx.fillRect(player.x, player.y, player.size, player.size);
 
-      // Player inner neon core
+      // Player inner core
       ctx.fillStyle = '#FFFFFF';
       ctx.fillRect(player.x + 6, player.y + 6, player.size - 12, player.size - 12);
       ctx.shadowBlur = 0;
@@ -413,7 +413,7 @@ export function initGame(container) {
 
       ctx.save();
       ctx.globalAlpha = Math.max(0, ft.alpha);
-      ctx.font = 'bold 18px sans-serif';
+      ctx.font = 'bold 18px Inter, sans-serif';
       ctx.fillStyle = ft.color;
       ctx.fillText(ft.text, ft.x, ft.y);
       ctx.restore();
@@ -423,56 +423,56 @@ export function initGame(container) {
 
     // HUD Header
     ctx.font = 'bold 22px Inter, sans-serif';
-    ctx.fillStyle = '#FFFFFF';
+    ctx.fillStyle = '#0F172A';
     ctx.fillText(`SCORE: ${score}`, 20, 42);
 
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+    ctx.fillStyle = '#64748B';
     ctx.font = 'bold 16px Inter, sans-serif';
     ctx.fillText(`HIGH: ${highscore}`, canvas.width - 150, 42);
 
     // ── Overlays ──
     if (gameState === 'START') {
-      ctx.fillStyle = 'rgba(10, 13, 25, 0.75)';
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.92)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       ctx.textAlign = 'center';
-      ctx.shadowBlur = 20;
-      ctx.shadowColor = '#00F0FF';
+      ctx.shadowBlur = 12;
+      ctx.shadowColor = 'rgba(79, 70, 229, 0.3)';
       ctx.font = '900 42px Inter, sans-serif';
-      ctx.fillStyle = '#00F0FF';
+      ctx.fillStyle = '#4F46E5';
       ctx.fillText('GRAVITY SWITCH', canvas.width / 2, canvas.height / 2 - 40);
 
       ctx.shadowBlur = 0;
-      ctx.font = '500 18px Inter, sans-serif';
-      ctx.fillStyle = '#FFFFFF';
+      ctx.font = '600 18px Inter, sans-serif';
+      ctx.fillStyle = '#334155';
       ctx.fillText('Click, Tap, or Press SPACE to Invert Gravity', canvas.width / 2, canvas.height / 2 + 10);
 
-      ctx.fillStyle = '#FFC93C';
+      ctx.fillStyle = '#D97706';
       ctx.font = 'bold 16px Inter, sans-serif';
       ctx.fillText('⚡ TAP OR PRESS SPACE TO START ⚡', canvas.width / 2, canvas.height / 2 + 60);
 
       ctx.textAlign = 'left';
     } else if (gameState === 'GAMEOVER') {
-      ctx.fillStyle = 'rgba(15, 8, 20, 0.82)';
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.94)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       ctx.textAlign = 'center';
-      ctx.shadowBlur = 20;
-      ctx.shadowColor = '#FF3366';
+      ctx.shadowBlur = 12;
+      ctx.shadowColor = 'rgba(239, 68, 68, 0.3)';
       ctx.font = '900 44px Inter, sans-serif';
-      ctx.fillStyle = '#FF3366';
+      ctx.fillStyle = '#EF4444';
       ctx.fillText('GAME OVER', canvas.width / 2, canvas.height / 2 - 50);
 
       ctx.shadowBlur = 0;
       ctx.font = 'bold 24px Inter, sans-serif';
-      ctx.fillStyle = '#FFFFFF';
+      ctx.fillStyle = '#0F172A';
       ctx.fillText(`FINAL SCORE: ${score}`, canvas.width / 2, canvas.height / 2);
 
       ctx.font = '500 18px Inter, sans-serif';
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+      ctx.fillStyle = '#475569';
       ctx.fillText(`BEST SCORE: ${highscore}`, canvas.width / 2, canvas.height / 2 + 35);
 
-      ctx.fillStyle = '#00F0FF';
+      ctx.fillStyle = '#4F46E5';
       ctx.font = 'bold 18px Inter, sans-serif';
       ctx.fillText('🔄 TAP OR PRESS SPACE TO PLAY AGAIN', canvas.width / 2, canvas.height / 2 + 85);
 
