@@ -19,14 +19,6 @@ export function initGame(container) {
 
   const ctx = canvas.getContext('2d');
 
-  function resize() {
-    canvas.width = container.clientWidth || 800;
-    canvas.height = container.clientHeight || 600;
-  }
-  resize();
-
-  window.addEventListener('resize', resize);
-
   // Game Constants & State
   const TOP_MARGIN = 70;
   const BOTTOM_MARGIN = 70;
@@ -40,7 +32,7 @@ export function initGame(container) {
 
   // Player
   const player = {
-    x: 120,
+    x: 180,
     y: 0,
     size: 28,
     gravity: 1, // 1 = down (floor), -1 = up (ceiling)
@@ -50,6 +42,17 @@ export function initGame(container) {
     color: '#4F46E5', // Vibrant indigo player
     trail: []
   };
+
+  function resize() {
+    canvas.width = container.clientWidth || 800;
+    canvas.height = container.clientHeight || 600;
+    if (player) {
+      player.x = Math.floor(Math.min(260, canvas.width * 0.32));
+    }
+  }
+  resize();
+
+  window.addEventListener('resize', resize);
 
   function getFloorY() {
     return canvas.height - BOTTOM_MARGIN - player.size;
