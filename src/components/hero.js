@@ -27,6 +27,7 @@ const featuredGames = [
     category: 'puzzle',
     isPlayable: true,
     engine: 'canvas',
+    image: '/images/hextris-stack.jpg',
     artSvg: `<svg viewBox="0 0 80 80" width="76" height="76" aria-hidden="true"><circle cx="40" cy="40" r="38" fill="rgba(255,255,255,0.16)"/><polygon points="40,16 61,28 61,52 40,64 19,52 19,28" stroke="white" stroke-width="4" fill="none"/><polygon points="40,26 52,33 52,47 40,54 28,47 28,33" fill="#f1c40f"/><circle cx="40" cy="40" r="6" fill="#e74c3c"/></svg>`
   },
   {

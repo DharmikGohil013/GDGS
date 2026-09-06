@@ -124,6 +124,7 @@ export const PAGE_SEO = {
     title: 'Play Hextris Stack Free Online — Hexagonal Tetris Browser Game | Playzy',
     description: 'Play Hextris Stack free online instantly — the official hexagonal Tetris puzzle game. Rotate the hexagon, match 3+ color blocks, build high-score combos. No download required.',
     url: '/#/play/hextris',
+    image: '/images/hextris-stack.jpg',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'VideoGame',
